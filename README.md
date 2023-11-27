@@ -1,5 +1,5 @@
 # Criminal-Management-System
-A database management for maintaining criminal records using Mysql and vs code
+A database management system for maintaining criminal records using Mysql and vs code
 I have used python and tkinter for GUI
 
 Step-1
