@@ -272,7 +272,7 @@ class Criminal:
         messagebox.showerror('Error', 'All Fields are required')
       else:
         try:
-            conn = mysql.connector.connect(host='localhost', username='root', password='Purple@123',
+            conn = mysql.connector.connect(host='localhost', username='root', password='Test@123',
                                            database='criminal_management')
             my_cursor = conn.cursor()
 
@@ -307,7 +307,7 @@ class Criminal:
 
     # fetch data 
     def fetch_data(self) : 
-        conn=mysql.connector.connect (host='localhost',username='root',password='Purple@123',database='criminal_management') 
+        conn=mysql.connector.connect (host='localhost',username='root',password='Test@123',database='criminal_management') 
         my_cursor=conn.cursor() 
         my_cursor.execute('select * from criminal1')
         data=my_cursor.fetchall() 
@@ -345,7 +345,7 @@ class Criminal:
           try : 
             update=messagebox.askyesno('Update', 'Are you sure you want to update ')
             if update>0 : 
-                conn=mysql.connector.connect(host='localhost', username='root', password="Purple@123",database='criminal_management')  
+                conn=mysql.connector.connect(host='localhost', username='root', password="Test@123",database='criminal_management')  
                 my_cursor=conn.cursor() 
                 my_cursor.execute('update criminal1 set Criminal_no=%s,Criminal_name=%s , Nick_name=%s, arrest_date=%s, dateOfcrime= %s, address =%s, age=%s, occupation=%s, BirthMark=%s, crimeType=%s, fatherName=%s, gender= %s where Case_id=%s',(
                                                                                                                                                                                                                                                          
@@ -383,7 +383,7 @@ class Criminal:
            try: 
               Delete=messagebox.askyesno('Delete', 'Are you sure you want to delete this record') 
               if Delete>0 : 
-                 conn=mysql.connector.connect(host='localhost', username='root', password="Purple@123",database='criminal_management')  
+                 conn=mysql.connector.connect(host='localhost', username='root', password="Test@123",database='criminal_management')  
                  my_cursor=conn.cursor() 
                  sql='delete from criminal1 where Case_id=%s'
                  value=(self.var_case_id.get(),)   
@@ -422,7 +422,7 @@ class Criminal:
           messagebox.showerror('Error','All fields are required')
        else:
           try:
-             conn=mysql.connector.connect(host='localhost', username='root', password="Purple@123",database='criminal_management')  
+             conn=mysql.connector.connect(host='localhost', username='root', password="Test@123",database='criminal_management')  
              my_cursor=conn.cursor()
              my_cursor.execute('select * from criminal1 where'+str(self.var_com_search.get())+"LIKE'%"+str(self.var_search()+"%'"))   
              rows=my_cursor.fetchall()
